@@ -5,7 +5,8 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] bool isPlayer;
-    [SerializeField] int health = 50;
+    public int health = 50;
+    public int startHealth;
     [SerializeField] int score = 50;
     [SerializeField] ParticleSystem hitEffect;
 
@@ -16,18 +17,23 @@ public class Health : MonoBehaviour
     AudioPlayer audioPlayer;
     ScoreKeeper scoreKeeper;
     LevelManager levelManager;
+
+    
     void Awake()
     {
+        startHealth = health;
+        Debug.Log(startHealth);
         cameraShake = Camera.main.GetComponent<CameraShake>();
         audioPlayer = FindObjectOfType<AudioPlayer>();
         scoreKeeper = FindObjectOfType<ScoreKeeper>();
         levelManager = FindObjectOfType<LevelManager>();
+        
     }
     
     void OnTriggerEnter2D(Collider2D other)
     {
         DamageDealer damageDealer = other.GetComponent<DamageDealer>();
-
+        
         if(damageDealer != null)
         {
             TakeDamage(damageDealer.GetDamage());
@@ -39,7 +45,7 @@ public class Health : MonoBehaviour
     }
 
     public int GetHealth()
-    {
+    { 
         return health;
     }
 

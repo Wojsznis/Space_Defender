@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 2b5d403abe331c6439b78fd6fd373ad6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 66b327640154f804f9a646fdb34a1219, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 1
-  health: 0
+  health: 200
   score: 50
   hitEffect: {fileID: 2161871757332844034, guid: 001db01218dc98f44a71ecce7b5eb0fd, type: 3}
   applyCameraShake: 1
